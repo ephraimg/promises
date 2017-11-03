@@ -67,7 +67,15 @@ var all = function(arrayOfPromises) {
  */
 
 var race = function(arrayOfPromises) {
-  // TODO
+  return new Promise(function(resolve, reject) {
+    for (let prom of arrayOfPromises) {
+      prom.then(result => {
+        resolve(result);
+      }).catch(error => { 
+        reject(error);
+      });
+    }
+  });
 };
 
 // Export these functions so we can unit test them
