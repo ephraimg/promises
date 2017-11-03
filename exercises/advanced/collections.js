@@ -8,7 +8,7 @@
  *    4. Writes the new file to the file located at `writePath`
  */
 
-var fs =  require('fs');
+var fs = require('fs');
 var Promise = require('bluebird');
 var prom = require('../bare_minimum/promiseConstructor.js');
 
